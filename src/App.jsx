@@ -1,16 +1,20 @@
+import Background from './components/background';
 import Header from './components/header';
 import Publications from './components/publications';
+import Footer from './components/footer';
 
 export default function App() {
   return (
     <div className="App">
 
-      <img className='background' src="img/background.jpg" alt="background" style={{ width: '100%' }} />
+      <Background />
 
       <Header />
 
       <Publications />
       <Publications />
+
+      <Footer />
 
 
     </div>
