@@ -1,0 +1,17 @@
+.Publications {
+    padding: 50px;
+}
+
+.Publications img {
+    width: 400px;
+    height: 200px;
+    border-radius: 5px;
+}
+
+.Publications p{
+    width: 400px;
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    word-break: break-word;
+}
