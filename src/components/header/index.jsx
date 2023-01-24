@@ -9,7 +9,6 @@ export default function Header() {
         <li>Notícias</li>
         <li>Política</li>
         <li>Econômia</li>
-        <li>Blog do LN</li>
       </ul>
     </div>
   );
