@@ -1,32 +1,41 @@
 .Publications {
-    padding: 50px;
+    width: 360px;
+    border-radius: 8px;
+    border: 1px solid rgb(234, 234, 234);
+    overflow: hidden;
 }
 
 .Publications img {
-    width: 400px;
-    height: 200px;
-    border-radius: 5px;
+    width: 360px;
+    height: 270px;
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
 }
 
-.Publications p{
-    width: 400px;
-    margin-top: 10px;
+.Publications p {
+    padding: 5px;
+    width: 360px;
+    margin-top: 0px !important;
     font-size: 20px;
     font-weight: 500;
     word-break: break-word;
+    font-size: 18px;
+    font-weight: 700;
 }
 
 @media (max-width: 768px) {
     .Publications {
         width: 100%;
     }
+
     .Publications img {
         width: 300px;
         height: 150px;
     }
-    .Publications p{
+
+    .Publications p {
         width: 300px;
         font-size: 16px;
     }
-    
+
 }

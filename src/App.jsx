@@ -11,8 +11,11 @@ export default function App() {
 
       <Header />
 
-      <Publications />
-      <Publications />
+      <div className='container'>
+        <Publications />
+        <Publications />
+      </div>
+
 
       <Footer />
 
