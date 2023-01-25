@@ -19,6 +19,11 @@ export default function App() {
         <Publications />
       </div>
 
+      <div className='container'>
+        <Publications />
+        <Publications />
+        <Publications />
+      </div>
 
       <Footer />
 
