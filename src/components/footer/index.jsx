@@ -9,9 +9,9 @@ export default function Footer() {
             </div>
 
             <div className="icons">
-                <i class="fi fi-brands-twitter" />
-                <i class="fi fi-brands-youtube" />
-                <i class="fi fi-brands-discord" />
+                <i className="fi fi-brands-twitter" />
+                <i className="fi fi-brands-youtube" />
+                <i className="fi fi-brands-discord" />
             </div>
         </div>
     );
