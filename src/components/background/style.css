@@ -1,5 +1,5 @@
 .Background .arrow {
-    position: fixed;
+    position: absolute;
     margin-top: -80px;
     left: 0;
     right: 0;

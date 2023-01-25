@@ -17,17 +17,31 @@ body {
 
 #root {
   --b: #01212C;
+  --p: #0f1923;
 }
 
-.container{
+.container {
   margin: 0 auto;
   width: 100%;
   max-width: 1200px;
   padding: 0 20px;
-  padding-top: 30px;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  column-count: 4;
+  column-gap: 1em;
 }
 
-.display-flex{
+.title{
+  font-size: 30px;
+  font-weight: 700;
+  padding-left: 60px;
+  padding-bottom: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+.display-flex {
   display: flex;
   align-items: center;
 }

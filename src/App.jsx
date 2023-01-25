@@ -11,7 +11,10 @@ export default function App() {
 
       <Header />
 
+      <p className='title'>Últimas Notícias</p>
+
       <div className='container'>
+        <Publications />
         <Publications />
         <Publications />
       </div>

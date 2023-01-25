@@ -13,14 +13,23 @@
 }
 
 .Publications p {
-    padding: 5px;
-    width: 360px;
-    margin-top: 0px !important;
+    margin: 0px !important;
     font-size: 20px;
     font-weight: 500;
     word-break: break-word;
     font-size: 18px;
     font-weight: 700;
+}
+
+.Publications .text {
+    padding: 10px;
+    width: 360px;
+
+}
+
+.Publications span {
+    font: 12px / 14px "Barlow";
+    opacity: 0.7;
 }
 
 @media (max-width: 768px) {
