@@ -7,7 +7,7 @@ export default function Background() {
 
     return (
         <div className="background">
-            <img src="img/background.jpg" alt="background" style={{ width: '100%' }} />
+            <img src="img/background.jpg" alt="background" style={{ width: '100%', height: '400px', objectFit: 'cover' }} />
             <i onClick={() => { goToTop() }} className="arrow fi fi-rr-angle-down"></i>
         </div>
     );

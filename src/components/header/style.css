@@ -1,8 +1,7 @@
 .header {
-    position: sticky;
-    top: 0;
+    position: sticky !important;
+    top: 0 !important;
     height: 70px;
-    margin-top: -4px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -32,19 +31,19 @@
     border-bottom: 2px solid var(--b);
 }
 
-.header .logo{
+.header .logo {
     display: flex;
     align-items: center;
 }
 
-.header .logo img{
+.header .logo img {
     width: 40px;
     min-width: 40px;
     height: 40px;
     margin-right: 10px;
 }
 
-.header .logo-new{
+.header .logo-new {
     height: 20px;
     padding: 6px;
     font-size: 10px;
@@ -58,12 +57,12 @@
     cursor: pointer;
 }
 
-.header .logo-new:hover{
+.header .logo-new:hover {
     background-color: #d70000
 }
 
-@media(max-width: 768px) {
+/* @media(max-width: 768px) {
     .header {
         padding: 0 30px;
     }
-}
+} */
