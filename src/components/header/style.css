@@ -61,8 +61,8 @@
     background-color: #d70000
 }
 
-/* @media(max-width: 768px) {
+@media(max-width: 768px) {
     .header {
         padding: 0 30px;
     }
-} */
+}
