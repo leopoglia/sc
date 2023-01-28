@@ -4,8 +4,7 @@
     justify-content: center;
     width: 50%;
     height: 510px;
-    margin: 0 60px;
-    margin-bottom: 50px;
+    margin: 20px 60px;
     border: 1px solid rgb(234, 234, 234);
     border-radius: 8px;
     overflow: hidden;
@@ -45,11 +44,18 @@
     opacity: 0.7;
 }
 
-.image-carousel img{
+.image-carousel img {
     transition: transform 0.5s ease-in-out;
 }
 
 .image-carousel img:hover {
     transform: scale(1.2);
     transition: all 0.7s ease;
+}
+
+@media(max-width: 768px) {
+    .image-carousel {
+        width: auto !important;
+        margin: 20px 30px !important;
+    }
 }
