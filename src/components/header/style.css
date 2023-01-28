@@ -1,6 +1,6 @@
 .header {
-    position: sticky !important;
     top: 0 !important;
+    position: sticky !important;
     height: 70px;
     display: flex;
     align-items: center;
