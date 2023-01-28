@@ -31,3 +31,9 @@
     color: var(--b);
     border-bottom: 2px solid var(--b);
 }
+
+@media(max-width: 764px){
+    .header{
+        padding: 0 10px;
+    }
+}
