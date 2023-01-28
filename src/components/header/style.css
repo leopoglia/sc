@@ -32,8 +32,8 @@
     border-bottom: 2px solid var(--b);
 }
 
-@media(max-width: 764px){
-    .header{
+@media(max-width: 768px) {
+    .header {
         padding: 0 30px;
     }
 }
