@@ -1,11 +1,11 @@
-import Background from './components/background';
-import Header from './components/header';
-import Publications from './components/publications';
-import Footer from './components/footer';
+import Background from '../../components/background';
+import Header from '../../components/header';
+import Publications from '../../components/publications';
+import Footer from '../../components/footer';
 
-export default function App() {
+export default function Home() {
   return (
-    <div className="App">
+    <div className="home">
 
       <Background />
 

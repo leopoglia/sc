@@ -11,13 +11,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.App {
-  min-height: 100vh;
-}
-
 #root {
   --b: #01212C;
   --p: #0f1923;
+}
+
+/* HOME */
+
+.home {
+  min-height: 100vh;
 }
 
 .container {
@@ -45,3 +47,7 @@ body {
   display: flex;
   align-items: center;
 }
+
+/* NEW */
+
+

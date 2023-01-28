@@ -2,8 +2,8 @@ import './style.css'
 
 export default function Header() {
   return (
-    <div className="Header">
-      <img src="img/logo.png" alt="logo" style={{width: '50px'}} />
+    <div className="header">
+      <img src="/img/logo.png" alt="logo" style={{width: '50px'}} />
 
       <ul>
         <li>Notícias</li>
