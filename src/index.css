@@ -18,22 +18,21 @@ body {
 
 /* HOME */
 
-.home, .new {
+.home,
+.new {
   min-height: 100vh;
   overflow: hidden;
 }
 
 .container {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 1200px;
-  padding: 0 20px;
   padding-top: 20px;
   display: flex;
   justify-content: space-between;
   margin-bottom: 40px;
   column-count: 4;
   column-gap: 1em;
+  margin: 0 60px;
+  overflow-x: auto;
 }
 
 .title {
@@ -50,5 +49,3 @@ body {
 }
 
 /* NEW */
-
-
