@@ -32,6 +32,36 @@
     border-bottom: 2px solid var(--b);
 }
 
+.header .logo{
+    display: flex;
+    align-items: center;
+}
+
+.header .logo img{
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.header .logo-new{
+    height: 20px;
+    padding: 6px;
+    font-size: 10px;
+    background-color: #FD0200;
+    border-radius: 3px;
+    color: white;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.header .logo-new:hover{
+    background-color: #d70000
+}
+
 @media(max-width: 768px) {
     .header {
         padding: 0 30px;

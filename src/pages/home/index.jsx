@@ -3,6 +3,7 @@ import Header from '../../components/header';
 import Publications from '../../components/publications';
 import Footer from '../../components/footer';
 import Slide from '../../components/slide';
+import NewMini from '../../components/new-mini';
 
 export default function Home() {
 
@@ -30,13 +31,19 @@ export default function Home() {
         <Publications />
       </div>
 
-      <Slide images={images} />
+      <div className='display-flex'>
+        <Slide images={images} />
+
+        <div className="new-minis">
+          <NewMini />
+        </div>
+      </div>
 
 
       <Footer />
 
 
-    </div>
+    </div >
   );
 }
 
