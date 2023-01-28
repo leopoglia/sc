@@ -18,7 +18,7 @@ body {
 
 /* HOME */
 
-.home {
+.home, .new {
   min-height: 100vh;
 }
 
