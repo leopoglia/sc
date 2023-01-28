@@ -21,7 +21,6 @@ body {
 .home,
 .new {
   min-height: 100vh;
-  overflow: hidden;
 }
 
 .container {
