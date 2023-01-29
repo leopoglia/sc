@@ -1,7 +1,12 @@
 .new-mini{
     height: 100%;
+    border-top: 1px solid rgb(234, 234, 234);
+    margin-top: 15px;
+    padding: 5px;
 }
 
 .new-mini p{
     font-weight: 600;
+    height: 34px;
+    overflow: hidden;
 }

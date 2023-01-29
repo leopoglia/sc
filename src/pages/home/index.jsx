@@ -36,6 +36,11 @@ export default function Home() {
 
         <div className="new-minis">
           <NewMini />
+          <NewMini />
+          <NewMini />
+          <NewMini />
+          <NewMini />
+
         </div>
       </div>
 
