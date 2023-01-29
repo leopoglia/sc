@@ -40,11 +40,12 @@ body {
   margin-bottom: 0px !important;
 }
 
-.display-flex, .display-flex-center {
+.display-flex,
+.display-flex-center {
   display: flex;
 }
 
-.display-flex-center{
+.display-flex-center {
   align-items: center;
 }
 
@@ -61,5 +62,12 @@ body {
 /* NEW */
 
 .new-minis {
+  margin-right: 60px;
   height: 100%;
+}
+
+@media(max-width: 768px) {
+  .new-minis {
+    margin-right: 30px;
+  }
 }
