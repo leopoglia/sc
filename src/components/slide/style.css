@@ -58,4 +58,9 @@
         width: auto !important;
         margin: 20px 30px !important;
     }
+
+
+    .image-carousel img {
+        height: 500px;
+    }
 }

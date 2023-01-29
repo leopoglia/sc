@@ -31,7 +31,7 @@ export default function Home() {
         <Publications />
       </div>
 
-      <div className='display-flex'>
+      <div className='grid-mobile'>
         <Slide images={images} />
 
         <div className="new-minis">

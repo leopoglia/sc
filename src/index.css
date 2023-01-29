@@ -41,7 +41,8 @@ body {
 }
 
 .display-flex,
-.display-flex-center {
+.display-flex-center,
+.grid-mobile {
   display: flex;
 }
 
@@ -68,6 +69,10 @@ body {
 
 @media(max-width: 768px) {
   .new-minis {
-    margin-right: 30px;
+    margin: 30px;
+  }
+
+  .grid-mobile{
+    display: grid !important;
   }
 }

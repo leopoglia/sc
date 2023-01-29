@@ -10,3 +10,9 @@
     height: 34px;
     overflow: hidden;
 }
+
+@media(max-width: 768px){
+    .new-mini{
+        height: auto;
+    }
+}
