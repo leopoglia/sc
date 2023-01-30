@@ -1,6 +1,7 @@
 .read-more {
     border-top: 1px solid rgb(234, 234, 234);
     margin: 60px;
+    margin-bottom: 20px !important;
     display: flex;
     justify-content: center;
     align-items: center;

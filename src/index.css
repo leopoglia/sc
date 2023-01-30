@@ -75,12 +75,47 @@ body {
   font-size: 30px;
 }
 
-.new .container .display-block p{
+.new .container .display-block div{
   font-size: 20px;
+  padding-bottom: 20px;
+  display: flex;
 }
 
 .new .container{
-  margin: 30px 100px;
+  margin: 30px 60px;
+}
+
+.new h1{
+  margin-bottom: 0px;
+}
+
+.new img{
+  width: 100%;
+  height: 400px;
+  object-fit: fill;
+  border-radius: 8px;
+}
+
+.new .desc{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 10px;
+}
+
+.new .desc i{
+  cursor: pointer;
+}
+
+.new .desc .display-flex{
+  display: flex;
+  align-items: center;
+  padding-bottom: 0px !important;
+}
+
+.new .desc .display-flex span{
+  font-size: 14px;
+  margin-right: 20px;
 }
 
 @media(max-width: 768px) {
