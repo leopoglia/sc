@@ -8,6 +8,13 @@ export default function New() {
         <div className="new">
 
             <Header />
+
+            <div className="container">
+                <div className='display-block'>
+                    <h1>Deputado diz que bancada do agronegócio está ‘receosa’ e ‘assustada’ com governo Lula</h1>
+                    <p>Futuro da Petrobras e quedas do setor bancário diminuíram os ganhos da bolsa na semana</p>
+                </div>
+            </div>
         </div>
     )
 }

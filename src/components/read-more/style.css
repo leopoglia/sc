@@ -1,0 +1,32 @@
+.read-more {
+    border-top: 1px solid rgb(234, 234, 234);
+    margin: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.read-more p{
+    font-size: 18px;
+}
+
+.read-more .display-block {
+    display: block;
+    text-align: center;
+    margin: 30px;
+}
+
+.read-more button{
+    width: 120px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: var(--b);
+    color: white;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+
+.read-more button:hover{
+    opacity: 0.9;
+}

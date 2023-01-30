@@ -4,6 +4,7 @@ import Publications from '../../components/publications';
 import Footer from '../../components/footer';
 import Slide from '../../components/slide';
 import NewMini from '../../components/new-mini';
+import ReadMore from '../../components/read-more';
 
 export default function Home() {
 
@@ -45,6 +46,7 @@ export default function Home() {
       </div>
 
 
+      <ReadMore />
       <Footer />
 
 
