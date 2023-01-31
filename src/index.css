@@ -82,16 +82,16 @@ body {
 }
 
 .new .content{
-  margin: 30px 120px !important;
+  margin: 30px 60px !important;
 }
 
 .new h1{
   margin-bottom: 0px;
 }
 
-.new img{
+.new .content img{
   width: 100%;
-  padding: 0 120px;
+  padding: 0 20%;
   height: 400px;
   object-fit: fill;
   border-radius: 8px !important;
@@ -131,6 +131,11 @@ body {
 @media(max-width: 768px) {
   .new-minis {
     margin: 30px;
+  }
+
+  .new .content img{
+    padding: 0px;
+    height: auto;
   }
 
   .grid-mobile{
