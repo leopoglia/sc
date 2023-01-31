@@ -133,6 +133,15 @@ body {
     margin: 30px;
   }
 
+  .new .desc{
+    display: block !important;
+  }
+
+  .new .desc p{
+    overflow: initial;
+    white-space: normal;
+  }
+
   .new .content img{
     padding: 0px;
     height: auto;
