@@ -82,7 +82,7 @@ body {
 }
 
 .new .content{
-  margin: 30px 60px !important;
+  margin: 30px 12% !important;
 }
 
 .new h1{
@@ -92,7 +92,6 @@ body {
 .new .content img{
   width: 100%;
   padding: 0 20%;
-  height: 400px;
   object-fit: fill;
   border-radius: 8px !important;
 }
@@ -145,6 +144,10 @@ body {
   .new .content img{
     padding: 0px;
     height: auto;
+  }
+
+  .new .content{
+    margin: 30px 30px !important;
   }
 
   .grid-mobile{
