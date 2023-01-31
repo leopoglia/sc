@@ -75,14 +75,14 @@ body {
   font-size: 30px;
 }
 
-.new .container .display-block div{
+.new .content .display-block div{
   font-size: 20px;
   padding-bottom: 20px;
   display: flex;
 }
 
-.new .container{
-  margin: 30px 100px !important;
+.new .content{
+  margin: 30px 120px !important;
 }
 
 .new h1{
@@ -91,7 +91,7 @@ body {
 
 .new img{
   width: 100%;
-  padding: 0 100px;
+  padding: 0 120px;
   height: 400px;
   object-fit: fill;
   border-radius: 8px !important;
@@ -114,9 +114,18 @@ body {
   padding-bottom: 0px !important;
 }
 
+.new .desc p{
+  margin-right: 30px;
+  width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .new .desc .display-flex span{
   font-size: 14px;
   margin-right: 20px;
+  width: 130px;
 }
 
 @media(max-width: 768px) {

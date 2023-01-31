@@ -9,11 +9,11 @@ export default function New() {
 
             <Header />
 
-            <div className="container">
+            <div className="content">
                 <div className='display-block'>
                     <h1>Deputado diz que bancada do agronegócio está ‘receosa’ e ‘assustada’ com governo Lula</h1>
                     <div className='desc'>
-                        <p>Futuro da Petrobras e quedas do setor bancário diminuíram os ganhos da bolsa na semana</p>
+                        <p>Futuro da Petrobras e quedas do setor bancário diminuíram os ganhos da bolsa na semanaaaaaaaaaaaa</p>
 
                         <div className='display-flex'>
                             <span> 29 jan 2023 - 20h45 </span>
