@@ -153,4 +153,8 @@ body {
   .grid-mobile{
     display: grid !important;
   }
+
+  .new .desc .display-flex span{
+    width: 100%;
+  }
 }
