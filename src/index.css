@@ -51,8 +51,23 @@ body {
 }
 
 @media(max-width: 768px) {
-  .container {
+  .home .container {
     margin: 30px;
+    display: block;
+    column-gap: normal;
+    column-count: normal;
+    column-count: auto;
+
+  }
+
+  .home .publications {
+    width: auto;
+    margin-bottom: 20px;
+  }	
+
+  .publications img,
+  .publications .text{
+    width: 100% !important;
   }
 
   .read-more{
