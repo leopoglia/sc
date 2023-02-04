@@ -6,7 +6,10 @@ const Services = {
             fetch((url + "news"), {
                 method: 'POST',
                 body: data,
-                headers: { 'Content-Type': 'application/json' }
+                headers: { 
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin': '*'
+                }
             }).then(function (result) { return result.json(); })
                 .then(resolve)
                 .catch(resolve)
