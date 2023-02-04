@@ -1,4 +1,4 @@
-import Header from "../../components/header";
+import Header from "../../../components/header";
 import Quill from "./quill";
 import "./style.css";
 
@@ -25,7 +25,7 @@ export default function Admin() {
 
                 <Quill />
 
-                <button>Enviar</button>
+                <button className="send">Enviar</button>
             </div>
         </div>
     );

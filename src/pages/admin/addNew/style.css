@@ -40,7 +40,8 @@
     cursor: pointer;
 }
 
-.admin button{
+.admin .send{
+    width: 100%;
     height: 40px;
     background-color: var(--b);
     color: white;
