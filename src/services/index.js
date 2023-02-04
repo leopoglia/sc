@@ -3,6 +3,7 @@ const url = "https://scback-pqnv43fc8-leopoglia.vercel.app/api/"
 
 const Services = {
     saveNew: function (data) {
+        console.log('DATA --> ', data)
         return new Promise((resolve, reject) => {
             fetch((url + "news"), {
                 method: 'POST',
