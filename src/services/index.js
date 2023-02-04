@@ -14,9 +14,10 @@ const Services = {
                 method: 'POST',
                 body: data,
                 headers: headers
-            }).then(function (result) { return result.json(); })
-                .then(resolve)
-                .catch(resolve)
+            }).then(function (result) {
+                console.log('RESULT --> ', result)
+                return result.json();
+            }).then(resolve).catch(resolve)
         })
     },
     findAll: async function () {
