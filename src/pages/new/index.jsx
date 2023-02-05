@@ -3,7 +3,7 @@ import Header from '../../components/header';
 import Footer from '../../components/footer';
 import ReadMore from '../../components/read-more';
 import Services from '../../services';
-import ReactMarkdown from "react-markdown";
+import HtmlReactParser from 'html-react-parser';
 import { useState, useEffect } from 'react';
 
 export default function New() {
@@ -21,8 +21,6 @@ export default function New() {
     }, []);
 
 
-
-
     return (
         <div className="new">
 
@@ -30,7 +28,7 @@ export default function New() {
 
             <div className="content">
                 <div className='display-block'>
-                    <h1>{news.title}</h1>
+                    {/* <h1>{news.title}</h1>
                     <div className='desc'>
                         <p>{news.description}</p>
 
@@ -43,9 +41,9 @@ export default function New() {
 
 
                     <img src={news.image} alt="" />
+ */}
+                    {HtmlReactParser(news.content)}
 
-
-                    <ReactMarkdown source={news.content} />
                 </div>
             </div>
 
