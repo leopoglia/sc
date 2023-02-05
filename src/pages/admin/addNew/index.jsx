@@ -38,6 +38,14 @@ export default function Admin() {
         });
     }
 
+    const handleChange = (e) => {
+        const reader = new FileReader();
+        reader.readAsDataURL(e.target.files[0]);
+        reader.onload = (event) => {
+          setImage(event.target.result);
+        };
+      };
+
     return (
         <div className="admin">
             <Header />
@@ -51,7 +59,7 @@ export default function Admin() {
                 <input onChange={(e) => setDescription(e.target.value)} type="text" />
 
                 <div className="file-input-container">
-                    <input onChange={(e) => setImage(e.target.value)} type="file" />
+                    <input onChange={handleChange} type="file" />
                     <div className="file-input-button">Selecionar imagem</div>
                 </div>
 
