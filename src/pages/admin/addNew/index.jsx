@@ -19,16 +19,13 @@ export default function Admin() {
         formData.append("image", image);
 
         try {
-            const response = await axios.post(
-                "https://api.imgur.com/3/image",
-                formData,
-                {
-                    headers: {
-                        Authorization: "Client-ID YOUR_CLIENT_ID",
-                        "Content-Type": "multipart/form-data",
-                    },
+            const response = await axios.post('https://api.imgur.com/3/image', formData, {
+                headers: {
+                    'Authorization': 'Client-ID 8a23bab2b0d8ef5'
                 }
-            );
+            });
+
+            console.log("RESPONSE--->" + response.data.data.link)
 
             setLink(response.data.data.link);
         } catch (error) {
