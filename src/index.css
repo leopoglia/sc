@@ -63,14 +63,14 @@ body {
   .home .publications {
     width: auto;
     margin-bottom: 20px;
-  }	
+  }
 
   .publications img,
-  .publications .text{
+  .publications .text {
     width: 100% !important;
   }
 
-  .read-more{
+  .read-more {
     padding: 10px 30px
   }
 
@@ -81,54 +81,64 @@ body {
 
 /* NEW */
 
+.new .html-react, .new .desc{
+  font-size: 18px;
+}
+
 .new-minis {
   margin-right: 60px;
   height: 100%;
 }
 
-.new .container .display-block h1{
+.new .container .display-block h1 {
   font-size: 30px;
 }
 
-.new .content .display-block div{
-  font-size: 20px;
+.new .content .display-block .display-flex {
   padding-bottom: 20px;
   display: flex;
 }
 
-.new .content{
+.new .content {
   margin: 30px 12% !important;
 }
 
-.new h1{
+.new .ref{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.new h1 {
   margin-bottom: 0px;
 }
 
-.new .content img{
+.new .content img {
   width: 100%;
   padding: 0 20%;
   object-fit: fill;
   border-radius: 8px !important;
 }
 
-.new .desc{
+.new .desc {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-right: 10px;
 }
 
-.new .desc i{
+.new .desc i {
   cursor: pointer;
 }
 
-.new .desc .display-flex{
+.new .desc .display-flex {
   display: flex;
   align-items: center;
   padding-bottom: 0px !important;
 }
 
-.new .desc p{
+.new .desc p {
   margin-right: 30px;
   width: 90%;
   overflow: hidden;
@@ -136,7 +146,7 @@ body {
   white-space: nowrap;
 }
 
-.new .desc .display-flex span{
+.new .desc .display-flex span {
   font-size: 14px;
   margin-right: 20px;
   width: 130px;
@@ -147,29 +157,29 @@ body {
     margin: 30px;
   }
 
-  .new .desc{
+  .new .desc {
     display: block !important;
   }
 
-  .new .desc p{
+  .new .desc p {
     overflow: initial;
     white-space: normal;
   }
 
-  .new .content img{
+  .new .content img {
     padding: 0px;
     height: auto;
   }
 
-  .new .content{
+  .new .content {
     margin: 30px 10% !important;
   }
 
-  .grid-mobile{
+  .grid-mobile {
     display: grid !important;
   }
 
-  .new .desc .display-flex span{
+  .new .desc .display-flex span {
     width: 100%;
   }
 }

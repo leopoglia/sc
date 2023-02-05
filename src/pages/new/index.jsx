@@ -4,6 +4,7 @@ import Footer from '../../components/footer';
 import ReadMore from '../../components/read-more';
 import Services from '../../services';
 import HtmlReactParser from 'html-react-parser';
+import Date from './date'
 import { useState, useEffect } from 'react';
 
 export default function New() {
@@ -28,12 +29,13 @@ export default function New() {
 
             <div className="content">
                 <div className='display-block'>
-                    {/* <h1>{news.title}</h1>
+                    <h1>{news.title}</h1>
                     <div className='desc'>
                         <p>{news.description}</p>
 
                         <div className='display-flex'>
-                            <span>{news.date}</span>
+                            <span><Date postedAt={news.date}></Date></span>
+                            
                             <i className="fi fi-rr-share"></i>
                         </div>
                     </div>
@@ -41,8 +43,15 @@ export default function New() {
 
 
                     <img src={news.image} alt="" />
- */}
-                    {HtmlReactParser(news.content)}
+                    <div className='ref'>
+                        <span>{news.imageRef}</span>
+                    </div>
+
+                    {news.content !== undefined &&
+                        <div className='html-react'>
+                            {HtmlReactParser(news.content)}
+                        </div>
+                    }
 
                 </div>
             </div>
