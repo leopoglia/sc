@@ -25,11 +25,12 @@ export default function Admin() {
                 }
             });
 
-            console.log("RESPONSE--->" + response.data.data.link)
+            return response.data.data.link;
 
             setLink(response.data.data.link);
         } catch (error) {
             console.error(error);
+            return 0;
         }
     };
 
@@ -41,12 +42,17 @@ export default function Admin() {
         //     return;
         // }
 
-        handleUpload();
+        const imageLink = handleUpload();
+
+        if (imageLink === 0) {
+            alert('Erro ao enviar imagem');
+            return;
+        }
 
         const data = {
             title: title,
             description: description,
-            image: link,
+            image: imageLink,
             imageRef: imageRef,
             content: content
         }
