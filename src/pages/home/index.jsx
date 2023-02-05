@@ -10,13 +10,13 @@ import { useState, useEffect } from 'react';
 
 export default function Home() {
 
-  const images = ['https://classic.exame.com/wp-content/uploads/2023/01/BRASIL-3.jpg', 'https://i.imgur.com/hERRz3a_d.webp?maxwidth=520&shape=thumb&fidelity=high'];
+  // const images = ['https://classic.exame.com/wp-content/uploads/2023/01/BRASIL-3.jpg', 'https://i.imgur.com/hERRz3a_d.webp?maxwidth=520&shape=thumb&fidelity=high'];
   const [news, setNews] = useState([]);
 
 
   useEffect(() => {
     Services.findAllNews().then((response) => {
-      console.log(response);
+      setNews(response);
     }).catch((error) => {
       console.log(error);
     });

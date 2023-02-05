@@ -30,7 +30,7 @@ const Services = {
     },
     findByIdNew: function (id) {
         return new Promise((resolve, reject) => {
-            fetch(url + "/" + id, {
+            fetch(url + "/news/" + id, {
                 method: 'GET', headers: { 'Content-Type': 'application/json' }
             }).then(function (result) { return result.json(); })
                 .then(resolve)
