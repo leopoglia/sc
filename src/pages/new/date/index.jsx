@@ -8,6 +8,8 @@ const formatTimeDifference = postedAt => {
 
     if (hours < 1) {
         return `há ${Math.round(timeDifference / (1000 * 60))} minutos`;
+    } else if (hours < 2) {
+        return `há ${hours} hora`;
     } else if (hours < 24) {
         return `há ${hours} horas`;
     }
