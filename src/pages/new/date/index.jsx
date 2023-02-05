@@ -18,9 +18,7 @@ const formatTimeDifference = postedAt => {
 };
 
 const NewsItem = ({ postedAt }) => (
-    <div>
-        <p>{formatTimeDifference(postedAt)}</p>
-    </div>
+    <span>{formatTimeDifference(postedAt)}</span>
 );
 
 export default NewsItem;

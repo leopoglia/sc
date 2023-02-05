@@ -12,7 +12,7 @@ export default function Publications(props) {
                 <div className="text">
                     <p>{props.title}</p>
 
-                    <Date postedAt={props.Date}></Date>
+                    <Date postedAt={props.date}></Date>
                 </div>
             </div>
         </Link>

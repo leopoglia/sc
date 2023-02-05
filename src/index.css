@@ -24,10 +24,9 @@ body {
 }
 
 .container {
-  display: flex;
-  justify-content: space-between;
-  column-count: 4;
-  column-gap: 1em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
   margin: 30px 60px;
   overflow-x: auto;
 }
@@ -81,7 +80,8 @@ body {
 
 /* NEW */
 
-.new .html-react, .new .desc{
+.new .html-react,
+.new .desc {
   font-size: 18px;
 }
 
@@ -103,7 +103,7 @@ body {
   margin: 30px 12% !important;
 }
 
-.new .ref{
+.new .ref {
   display: flex;
   align-items: center;
   justify-content: center;
