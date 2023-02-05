@@ -32,7 +32,7 @@ export default function Home() {
         <Publications />
       </div>
 
-      <div className='grid-mobile'>
+      {/* <div className='grid-mobile'>
         <Slide images={images} />
 
         <div className="new-minis">
@@ -43,7 +43,7 @@ export default function Home() {
           <NewMini />
 
         </div>
-      </div>
+      </div> */}
 
 
       <ReadMore />
