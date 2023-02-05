@@ -2,6 +2,7 @@ import Header from "../../../components/header";
 import Quill from "./quill";
 import "./style.css";
 import Services from "../../../services";
+import axios from "axios";
 import { useState } from "react";
 
 export default function Admin() {
@@ -9,8 +10,32 @@ export default function Admin() {
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
     const [image, setImage] = useState('');
+    const [link, setLink] = useState('');
     const [imageRef, setImageRef] = useState('');
     const [content, setContent] = useState('');
+
+    const handleUpload = async () => {
+        const formData = new FormData();
+        formData.append("image", image);
+
+        try {
+            const response = await axios.post(
+                "https://api.imgur.com/3/image",
+                formData,
+                {
+                    headers: {
+                        Authorization: "Client-ID YOUR_CLIENT_ID",
+                        "Content-Type": "multipart/form-data",
+                    },
+                }
+            );
+
+            setLink(response.data.data.link);
+        } catch (error) {
+            console.error(error);
+        }
+    };
+
 
     function sendNew() {
 
@@ -19,10 +44,12 @@ export default function Admin() {
         //     return;
         // }
 
+        handleUpload();
+
         const data = {
             title: title,
             description: description,
-            image: image,
+            image: link,
             imageRef: imageRef,
             content: content
         }
@@ -38,14 +65,6 @@ export default function Admin() {
         });
     }
 
-    const handleChange = (e) => {
-        const reader = new FileReader();
-        reader.readAsDataURL(e.target.files[0]);
-        reader.onload = (event) => {
-            setImage(event.target.result);
-        };
-    };
-
     return (
         <div className="admin">
             <Header />
@@ -59,7 +78,7 @@ export default function Admin() {
                 <input onChange={(e) => setDescription(e.target.value)} type="text" />
 
                 <div className="file-input-container">
-                    <input onChange={handleChange} type="file" />
+                    <input onChange={e => setImage(e.target.files[0])} type="file" />
                     <div className="file-input-button">Selecionar imagem</div>
                 </div>
 

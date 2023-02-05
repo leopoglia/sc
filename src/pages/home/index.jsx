@@ -36,7 +36,7 @@ export default function Home() {
 
         {news.map((item) => {
           return (
-            <Publications id={item.id} title={item.title} description={item.description} image={item.image} imageRef={item.imageRef} content={item.content} />
+            <Publications id={item.id} date={item.date} title={item.title} description={item.description} image={item.image} imageRef={item.imageRef} content={item.content} />
           )
         })}
       </div>

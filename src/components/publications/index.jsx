@@ -4,6 +4,8 @@ import Date from "../../pages/new/date";
 
 export default function Publications(props) {
 
+    console.log(props)
+
     return (
         <Link to={"/new/" + props.id}>
             <div className="publications">
