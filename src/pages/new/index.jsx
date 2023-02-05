@@ -37,7 +37,9 @@ export default function New() {
     return (
         <div className="new">
             <Helmet>
+                <meta charSet="utf-8" />
                 <meta property="og:image" content={news.image} />
+                <meta property="og:title" content={news.title} />
                 <title>{news.title}</title>
                 <meta name="description" content={news.description} />
             </Helmet>
