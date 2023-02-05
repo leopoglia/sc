@@ -5,10 +5,21 @@ import Footer from '../../components/footer';
 import Slide from '../../components/slide';
 import NewMini from '../../components/new-mini';
 import ReadMore from '../../components/read-more';
+import Services from '../../services';
+import { useState } from 'react';
 
 export default function Home() {
 
   const images = ['https://classic.exame.com/wp-content/uploads/2023/01/BRASIL-3.jpg', 'https://i.imgur.com/hERRz3a_d.webp?maxwidth=520&shape=thumb&fidelity=high'];
+  const [news, setNews] = useState([]);
+
+  Services.findAllNews().then((response) => {
+    console.log(response);
+    setNews(response);
+  }).catch((error) => {
+    console.log(error);
+  });
+
 
   return (
     <div className="home">
@@ -18,6 +29,7 @@ export default function Home() {
       <Header />
 
       <p className='title'>Últimas Notícias</p>
+
 
 
       <div className='container'>
