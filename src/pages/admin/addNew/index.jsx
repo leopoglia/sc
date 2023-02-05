@@ -51,7 +51,7 @@ export default function Admin() {
                 <input onChange={(e) => setDescription(e.target.value)} type="text" />
 
                 <div className="file-input-container">
-                    <input onChange={(value) => setImage(value)} type="file" />
+                    <input onChange={(e) => setImage(e.target.value)} type="file" />
                     <div className="file-input-button">Selecionar imagem</div>
                 </div>
 
