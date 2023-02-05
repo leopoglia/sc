@@ -1,8 +1,12 @@
-const url = "https://scback-pqnv43fc8-leopoglia.vercel.app/api/"
+const url = "https://sensoc.vercel.app/api/"
 
 
 const Services = {
     saveNew: function (data) {
+
+        const now = new Date();
+
+        data.date = now.toISOString();
 
         return new Promise((resolve, reject) => {
             fetch((url + "news"), {
@@ -24,7 +28,7 @@ const Services = {
                 .catch(resolve)
         })
     },
-    findById: function (id) {
+    findByIdNew: function (id) {
         return new Promise((resolve, reject) => {
             fetch(url + "/" + id, {
                 method: 'GET', headers: { 'Content-Type': 'application/json' }

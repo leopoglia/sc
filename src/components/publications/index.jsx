@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 
 export default function Publications(props) {
 
-
-
     return (
         <Link to={"/new/" + props.id}>
             <div className="publications">

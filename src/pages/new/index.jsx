@@ -2,8 +2,27 @@ import Background from '../../components/background';
 import Header from '../../components/header';
 import Footer from '../../components/footer';
 import ReadMore from '../../components/read-more';
+import Services from '../../services';
+import ReactMarkdown from "react-markdown";
+import { useState, useEffect } from 'react';
 
 export default function New() {
+
+    const url = window.location.href.split('/')[4];
+    const [news, setNews] = useState([]);
+
+    useEffect(() => {
+        Services.findByIdNew(url).then((response) => {
+            console.log(response);
+            setNews(response);
+        }).catch((error) => {
+            console.log(error);
+        });
+    }, []);
+
+
+
+
     return (
         <div className="new">
 
@@ -11,19 +30,22 @@ export default function New() {
 
             <div className="content">
                 <div className='display-block'>
-                    <h1>Deputado diz que bancada do agronegócio está ‘receosa’ e ‘assustada’ com governo Lula</h1>
+                    <h1>{news.title}</h1>
                     <div className='desc'>
-                        <p>Futuro da Petrobras e quedas do setor bancário diminuíram os ganhos da bolsa na semanaaaaaaaaaaaa</p>
+                        <p>{news.description}</p>
 
                         <div className='display-flex'>
-                            <span> 29 jan 2023 - 20h45 </span>
-                            <i class="fi fi-rr-share"></i>
+                            <span>{news.date}</span>
+                            <i className="fi fi-rr-share"></i>
                         </div>
                     </div>
 
 
 
-                    <img src="https://classic.exame.com/wp-content/uploads/2023/01/BRASIL-3.jpg" alt="" />
+                    <img src={news.image} alt="" />
+
+
+                    <ReactMarkdown source={news.content} />
                 </div>
             </div>
 
