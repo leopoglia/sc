@@ -49,3 +49,9 @@
     cursor: pointer;
     margin-top: 20px;
 }
+
+@media screen and (min-width: 768px) {
+    .admin .container {
+        margin: 30px 20px;
+    }
+}

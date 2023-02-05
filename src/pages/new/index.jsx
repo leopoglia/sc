@@ -5,6 +5,7 @@ import ReadMore from '../../components/read-more';
 import Services from '../../services';
 import HtmlReactParser from 'html-react-parser';
 import Date from './date'
+import { Helmet } from "react-helmet";
 import { useState, useEffect } from 'react';
 
 export default function New() {
@@ -35,6 +36,11 @@ export default function New() {
 
     return (
         <div className="new">
+            <Helmet>
+                <meta property="og:image" content={news.image} />
+                <title>{news.title}</title>
+                <meta name="description" content={news.description} />
+            </Helmet>
 
             <Header />
 
