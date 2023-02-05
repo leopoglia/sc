@@ -8,7 +8,7 @@ import Date from './date'
 import { Helmet } from "react-helmet";
 import { useState, useEffect } from 'react';
 
-export default function New({ match }) {
+export default function New() {
 
     const url = window.location.href.split('/')[4];
     const [news, setNews] = useState([]);
@@ -19,7 +19,7 @@ export default function New({ match }) {
         }).catch((error) => {
             console.log(error);
         });
-    }, [match.params.id]);
+    }, [url]);
 
     function handleShareButtonClick() {
         const link = window.location.href;
@@ -42,7 +42,7 @@ export default function New({ match }) {
                 <meta property="og:image" content={news.image} />
                 <meta property="og:title" content={news.title} />
                 <meta name="description" content={news.description} />
-                <meta property="og:url" content={`https://sensoc.vercel.app/new/${match.params.id}`} />
+                <meta property="og:url" content={`https://sensoc.vercel.app/new/${url}`} />
             </Helmet>
 
             <Header />
