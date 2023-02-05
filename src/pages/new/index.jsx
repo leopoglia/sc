@@ -14,12 +14,23 @@ export default function New() {
 
     useEffect(() => {
         Services.findByIdNew(url).then((response) => {
-            console.log(response);
             setNews(response);
         }).catch((error) => {
             console.log(error);
         });
     }, []);
+
+    function handleShareButtonClick() {
+        const link = window.location.href;
+        copyToClipboard(link);
+    }
+
+    function copyToClipboard(text) {
+        navigator.clipboard.writeText(text).then(function () {
+        }, function (err) {
+            console.error('Failed to copy: ', err);
+        });
+    }
 
 
     return (
@@ -35,8 +46,8 @@ export default function New() {
 
                         <div className='display-flex'>
                             <span><Date postedAt={news.date}></Date></span>
-                            
-                            <i className="fi fi-rr-share"></i>
+
+                            <i onClick={handleShareButtonClick} className="fi fi-rr-share"></i>
                         </div>
                     </div>
 

@@ -60,7 +60,6 @@ export default function Admin() {
             if (response.status === 200) {
                 alert('Notícia enviada com sucesso');
             }
-            console.log(response)
         }).catch((error) => {
             console.log(error);
         });

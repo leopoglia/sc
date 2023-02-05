@@ -14,7 +14,6 @@ const Services = {
                 body: JSON.stringify(data),
                 headers: { 'Content-Type': 'application/json' }
             }).then(function (result) {
-                console.log('RESULT --> ', result)
                 return result.json();
             }).then(resolve).catch(resolve)
         })

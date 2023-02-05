@@ -182,4 +182,8 @@ body {
   .new .desc .display-flex span {
     width: 100%;
   }
+
+  .read-more {
+    margin: 0px !important;
+  }
 }
