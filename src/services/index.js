@@ -7,7 +7,7 @@ const Services = {
         return new Promise((resolve, reject) => {
             fetch((url + "news"), {
                 method: 'POST',
-                body: data,
+                body: JSON.stringify(data),
                 mode: 'no-cors',
                 headers: { 'Content-Type': 'application/json' }
             }).then(function (result) {
