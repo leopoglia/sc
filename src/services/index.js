@@ -6,7 +6,7 @@ const Services = {
 
         console.log(data)
 
-        console.log(JSON.stringify({title: data.title, description: data.description, image: data.image, imageRef: data.imageRef, content: data.content}))
+        console.log(data.title, data.description,data.image,data.imageRef, data.content)
 
         console.log('DATA --> ', data)
         return new Promise((resolve, reject) => {
