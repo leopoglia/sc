@@ -14,18 +14,19 @@ export default function Admin() {
 
     function sendNew() {
 
-        if (title === '' || description === '' || image === '' || imageRef === '' || content === '') {
-            alert('Preencha todos os campos');
-            return;
-        }
+        // if (title === '' || description === '' || image === '' || imageRef === '' || content === '') {
+        //     alert('Preencha todos os campos');
+        //     return;
+        // }
 
         const data = {
-            title,
-            description,
-            image,
-            imageRef,
-            content
+            title: title,
+            description: description,
+            image: image,
+            imageRef: imageRef,
+            content: content
         }
+
 
         Services.saveNew(data).then((response) => {
             if (response.status === 200) {
