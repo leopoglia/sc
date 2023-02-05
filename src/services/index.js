@@ -8,7 +8,6 @@ const Services = {
             fetch((url + "news"), {
                 method: 'POST',
                 body: JSON.stringify(data),
-                mode: 'no-cors',
                 headers: { 'Content-Type': 'application/json' }
             }).then(function (result) {
                 console.log('RESULT --> ', result)
