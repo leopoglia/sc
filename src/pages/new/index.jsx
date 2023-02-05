@@ -6,7 +6,7 @@ import Services from '../../services';
 import HtmlReactParser from 'html-react-parser';
 import Date from './date'
 import { Helmet } from "react-helmet";
-import { useState, useEffect } from 'react';
+import { Suspense, useState, useEffect } from 'react';
 
 export default function New() {
 
@@ -36,14 +36,16 @@ export default function New() {
 
     return (
         <div className="new">
-            <Helmet>
-                <meta charSet="utf-8" />
-                <title>{news.title}</title>
-                <meta property="og:image" content={news.image} />
-                <meta property="og:title" content={news.title} />
-                <meta name="description" content={news.description} />
-                <meta property="og:url" content={`https://sensoc.vercel.app/new/${url}`} />
-            </Helmet>
+            <Suspense fallback={<div>Loading...</div>}>
+                <Helmet>
+                    <meta charSet="utf-8" />
+                    <title>{news.title}</title>
+                    <meta property="og:image" content={news.image} />
+                    <meta property="og:title" content={news.title} />
+                    <meta name="description" content={news.description} />
+                    <meta property="og:url" content={`https://sensoc.vercel.app/new/${url}`} />
+                </Helmet>
+            </Suspense>
 
             <Header />
 
