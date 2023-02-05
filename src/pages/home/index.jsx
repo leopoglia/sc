@@ -30,19 +30,15 @@ export default function Home() {
 
       <p className='title'>Últimas Notícias</p>
 
-
-
       <div className='container'>
-        <Publications />
-        <Publications />
-        <Publications />
+
+        {news.map((item) => {
+          return (
+            <Publications id={item.id} title={item.title} description={item.description} image={item.image} imageRef={item.imageRef} content={item.content} />
+          )
+        })}
       </div>
 
-      <div className='container'>
-        <Publications />
-        <Publications />
-        <Publications />
-      </div>
 
       {/* <div className='grid-mobile'>
         <Slide images={images} />

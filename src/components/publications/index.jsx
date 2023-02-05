@@ -1,14 +1,17 @@
 import "./style.css";
 import { Link } from "react-router-dom";
 
-export default function Publications() {
+export default function Publications(props) {
+
+
+
     return (
-        <Link to="/new/1">
+        <Link to={"/new/" + props.id}>
             <div className="publications">
-                <img src="https://classic.exame.com/wp-content/uploads/2023/01/BRASIL-3.jpg?quality=70&strip=info&w=1024" alt="" />
+                <img src={props.image} alt="base64 image"/>
 
                 <div className="text">
-                    <p>Deputado diz que bancada do agronegócio está ‘receosa’ e ‘assustada’ com governo Lula</p>
+                    <p>{props.title}</p>
 
                     <span>Há 30 minutos • Brasil</span>
                 </div>
