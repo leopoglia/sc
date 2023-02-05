@@ -14,7 +14,7 @@ export default function Admin() {
     const [imageRef, setImageRef] = useState('');
     const [content, setContent] = useState('');
 
-    const handleUpload = async () => {
+    async function handleUpload () {
         const formData = new FormData();
         formData.append("image", image);
 
@@ -26,8 +26,6 @@ export default function Admin() {
             });
 
             return response.data.data.link;
-
-            setLink(response.data.data.link);
         } catch (error) {
             console.error(error);
             return 0;
@@ -35,14 +33,14 @@ export default function Admin() {
     };
 
 
-    function sendNew() {
+    async function sendNew() {
 
         // if (title === '' || description === '' || image === '' || imageRef === '' || content === '') {
         //     alert('Preencha todos os campos');
         //     return;
         // }
 
-        const imageLink = handleUpload();
+        const imageLink = await handleUpload();
 
         if (imageLink === 0) {
             alert('Erro ao enviar imagem');
