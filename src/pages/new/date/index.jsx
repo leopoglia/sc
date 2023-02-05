@@ -6,7 +6,9 @@ const formatTimeDifference = postedAt => {
     const timeDifference = now - postedTime;
     const hours = Math.round(timeDifference / (1000 * 60 * 60));
 
-    if (hours < 24) {
+    if (hours < 1) {
+        return `há ${Math.round(timeDifference / (1000 * 60))} minutos`;
+    } else if (hours < 24) {
         return `há ${hours} horas`;
     }
 
