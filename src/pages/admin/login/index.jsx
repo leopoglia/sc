@@ -1,20 +1,43 @@
 import React, { useState } from 'react';
 import '../addNew/style.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Services from '../../../services';
+import { useNavigate } from 'react-router-dom';
+
 
 export default function Login() {
-    const [email, setEmail] = useState('');
+    const [user, setUser] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
+
+    const navigate = useNavigate();
 
     function handleSubmit(e) {
         e.preventDefault();
 
-        if (email === '' || password === '') {
-            setError('Preencha todos os campos!');
+        if (user === '' || password === '') {
+            toast.warning('Preencha todos os campos!');
         } else {
-            setError('');
+
+            Services.findAllUsers().then((res) => {
+                const users = res;
+                console.log(users);
+
+                const userExists = users.find((u) => {
+                    return u.user === user && u.password === password;
+                });
+
+                if (userExists) {
+                    navigate('/admin/news');
+                } else {
+                    toast.error('Usuário ou senha inválidos!');
+                }
+            }
+            );
         }
     }
+
 
     return (
         <div className="admin">
@@ -24,16 +47,17 @@ export default function Login() {
                     <div className="display-block">
                         <h1>Entrar</h1>
 
-                        <span>Email</span>
-                        <input type="text" />
+                        <span>Usuário</span>
+                        <input onChange={(e)=> {setUser(e.target.value)}} type="text" />
 
                         <span>Senha</span>
-                        <input type="password" />
+                        <input onChange={(e)=> {setPassword(e.target.value)}} type="password" />
 
-                        <button className="send">Entrar</button>
+                        <button onClick={handleSubmit} className="send">Entrar</button>
                     </div>
                 </div>
             </div>
+            <ToastContainer position='bottom-right' />
         </div>
     )
 

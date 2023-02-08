@@ -44,7 +44,18 @@ const Services = {
                 .then(resolve)
                 .catch(resolve)
         })
-    }
+    },
+    findAllUsers: async function () {
+        return new Promise((resolve, reject) => {
+            fetch(url + "admin", {
+                method: 'GET', headers: { 'Content-Type': 'application/json' }
+            }).then(function (result) { return result.json(); })
+                .then(resolve)
+                .catch(resolve)
+        })
+    },
+
+    
 }
 
 export default Services;
