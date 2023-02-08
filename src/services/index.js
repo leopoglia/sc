@@ -47,7 +47,7 @@ const Services = {
     },
     findAllUsers: async function () {
         return new Promise((resolve, reject) => {
-            fetch(url + "admin", {
+            fetch(url + "/users", {
                 method: 'GET', headers: { 'Content-Type': 'application/json' }
             }).then(function (result) { return result.json(); })
                 .then(resolve)

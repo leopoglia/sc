@@ -29,6 +29,7 @@ export default function Login() {
                 });
 
                 if (userExists) {
+                    localStorage.setItem('isAuthenticated', true);
                     navigate('/admin/news');
                 } else {
                     toast.error('Usuário ou senha inválidos!');
