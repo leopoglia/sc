@@ -2,11 +2,10 @@ import Background from '../../components/background';
 import Header from '../../components/header';
 import Footer from '../../components/footer';
 import ReadMore from '../../components/read-more';
-import Services from '../../services';
 import HtmlReactParser from 'html-react-parser';
 import Date from './date'
 import { Helmet } from "react-helmet";
-import { Suspense, useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function New() {
 
@@ -14,12 +13,9 @@ export default function New() {
     const [news, setNews] = useState([]);
 
     useEffect(() => {
-        Services.findByIdNew(url).then((response) => {
-            setNews(response);
-        }).catch((error) => {
-            console.log(error);
-        });
-    }, [url]);
+        const n = JSON.parse(localStorage.getItem('new'));
+        setNews(n);
+    }, [news]);
 
     function handleShareButtonClick() {
         const link = window.location.href;
@@ -36,16 +32,14 @@ export default function New() {
 
     return (
         <div className="new">
-            <Suspense fallback={<div>Loading...</div>}>
-                <Helmet>
-                    <meta charSet="utf-8" />
-                    <title>{news.title}</title>
-                    <meta property="og:image" content={news.image} />
-                    <meta property="og:title" content={news.title} />
-                    <meta name="description" content={news.description} />
-                    <meta property="og:url" content={`https://sensoc.vercel.app/new/${url}`} />
-                </Helmet>
-            </Suspense>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>{news.title}</title>
+                <meta name="og:image" content={news.image} />
+                <meta property="og:title" content={news.title} />
+                <meta name="description" content={news.description} />
+                <meta property="og:url" content={`https://sensoc.vercel.app/new/${url}`} />
+            </Helmet>
 
             <Header />
 
