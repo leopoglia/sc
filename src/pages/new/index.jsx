@@ -4,7 +4,7 @@ import Footer from '../../components/footer';
 import ReadMore from '../../components/read-more';
 import HtmlReactParser from 'html-react-parser';
 import Date from './date'
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { useState, useEffect } from 'react';
 
 export default function New() {
@@ -35,10 +35,15 @@ export default function New() {
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>{news.title}</title>
-                <meta name="og:image" content={news.image} />
+                <meta name='description' content={news.description} />
+
                 <meta property="og:title" content={news.title} />
-                <meta name="description" content={news.description} />
-                <meta property="og:url" content={`https://sensoc.vercel.app/new/${url}`} />
+                <meta property="og:image" content={news.image} />
+                <meta property="og:title" content={news.title} />
+
+                <meta property="twitter:title" content={news.title} />
+                <meta property="twitter:image" content={news.image} />
+                <meta property="twitter:description" content={news.description} />
             </Helmet>
 
             <Header />
