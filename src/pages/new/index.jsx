@@ -4,7 +4,7 @@ import Footer from '../../components/footer';
 import ReadMore from '../../components/read-more';
 import HtmlReactParser from 'html-react-parser';
 import Date from './date'
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 import { useState, useEffect } from 'react';
 
 export default function New() {

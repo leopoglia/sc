@@ -7,6 +7,7 @@ import NewMini from '../../components/new-mini';
 import ReadMore from '../../components/read-more';
 import Services from '../../services';
 import { useState, useEffect } from 'react';
+import { Helmet } from "react-helmet";
 
 export default function Home() {
 
@@ -25,6 +26,14 @@ export default function Home() {
 
   return (
     <div className="home">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Senso Crítico</title>
+        <meta name='description' content="Senso Crítico, notícias e análises sobre política, economia, cultura e sociedade." />
+        <meta name="keywords" content="Senso Crítico, notícias, análises, política, economia, cultura, sociedade" />
+        <meta name="author" content="Senso Crítico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Helmet>
 
       <Background />
 

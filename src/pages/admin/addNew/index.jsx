@@ -4,6 +4,8 @@ import "./style.css";
 import Services from "../../../services";
 import axios from "axios";
 import { useState } from "react";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Admin() {
 
@@ -14,7 +16,7 @@ export default function Admin() {
     const [imageRef, setImageRef] = useState('');
     const [content, setContent] = useState('');
 
-    async function handleUpload () {
+    async function handleUpload() {
         const formData = new FormData();
         formData.append("image", image);
 
@@ -35,17 +37,17 @@ export default function Admin() {
 
     async function sendNew() {
 
-        // if (title === '' || description === '' || image === '' || imageRef === '' || content === '') {
-        //     alert('Preencha todos os campos');
-        //     return;
-        // }
+        if (title === '' || description === '' || image === '' || imageRef === '' || content === '') {
+            toast.warning('Preencha todos os campos!');
+            return;
+        }
 
         const imageLink = await handleUpload();
 
-        if (imageLink === 0) {
-            alert('Erro ao enviar imagem');
-            return;
-        }
+        // if (imageLink === 0) {
+        //     toast.error('Erro ao enviar imagem');
+        //     return;
+        // }
 
         const data = {
             title: title,
@@ -57,8 +59,12 @@ export default function Admin() {
 
 
         Services.saveNew(data).then((response) => {
-            if (response.status === 200) {
-                alert('Notícia enviada com sucesso');
+            console.log(response);
+
+            if (response.id !== undefined) {
+                toast.success('Notícia enviada com sucesso!');
+            }else {
+                toast.error('Erro ao enviar notícia');
             }
         }).catch((error) => {
             console.log(error);
@@ -89,6 +95,9 @@ export default function Admin() {
 
                 <button onClick={() => sendNew()} className="send">Enviar</button>
             </div>
+
+            <ToastContainer position='bottom-right' />
+
         </div>
     );
 }
