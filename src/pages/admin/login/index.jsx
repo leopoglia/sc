@@ -22,7 +22,6 @@ export default function Login() {
 
             Services.findAllUsers().then((res) => {
                 const users = res;
-                console.log(users);
 
                 const userExists = users.find((u) => {
                     return u.user === user && u.password === password;
