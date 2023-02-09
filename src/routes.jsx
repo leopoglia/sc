@@ -3,6 +3,7 @@ import Home from "./pages/home";
 import New from "./pages/new";
 import Admin from "./pages/admin/login";
 import AddNew from "./pages/admin/addNew";
+import PrivateRoute from "./pages/admin/privateRoute";
 
 export default function Router() {
     return (
@@ -11,7 +12,7 @@ export default function Router() {
                 <Route path="/" element={<Home />} />
                 <Route path="/new/:id" element={<New />} />
                 <Route path="/admin" element={<Admin />} />
-                <Route path="/admin/news" element={<AddNew />} />
+                <Route path="/admin/news" element={<PrivateRoute />} />
             </Routes>
         </BrowserRouter>
     )
