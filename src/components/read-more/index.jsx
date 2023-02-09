@@ -1,4 +1,5 @@
 import './style.css';
+import { Link } from 'react-router-dom';
 
 export default function ReadMore() {
     return (
@@ -9,7 +10,9 @@ export default function ReadMore() {
 
                 <p>Acompanhe as últimas notícias e atualizações, aqui no Senso Crítico.</p>
 
-                <button className="btn-read-more">LEIA MAIS</button>
+                <Link to="/">
+                    <button className="btn-read-more">LEIA MAIS</button>
+                </Link>
             </div>
         </div>
     )

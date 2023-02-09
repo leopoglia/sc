@@ -3,8 +3,8 @@ import Home from "./pages/home";
 import New from "./pages/new";
 import Admin from "./pages/admin/login";
 import AddNew from "./pages/admin/addNew";
-import PrivateRoute from "./pages/admin/privateRoute";
 import ProtectedRoutes from "./pages/admin/privateRoute";
+import Error from "./pages/error";
 
 export default function Router() {
     return (
@@ -16,6 +16,8 @@ export default function Router() {
                 <Route path="/" element={<ProtectedRoutes />}>
                     <Route path="/admin/news" element={<AddNew />} />
                 </Route>
+
+                <Route path="*" element={<Error/>} />
             </Routes>
         </BrowserRouter>
     )

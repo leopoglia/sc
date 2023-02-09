@@ -8,11 +8,11 @@ export default function Header() {
         <img src="/img/logo.png" alt="logo" />
       </Link>
 
-      <ul>
+      {/* <ul>
         <li>Notícias</li>
         <li>Política</li>
         <li>Econômia</li>
-      </ul>
+      </ul> */}
     </div>
   );
 }
